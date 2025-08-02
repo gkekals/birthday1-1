@@ -1,0 +1,171 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    background: linear-gradient(135deg, #fdc1c5 0%, #f8ffae 100%);
+    font-family: 'Pacifico', cursive, Arial, sans-serif;
+    position: relative;
+    user-select: none;
+}
+
+#star-bg {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    z-index: 0;
+}
+
+.center-box {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    background: rgba(255, 255, 255, 0.6);
+    border-radius: 40px;
+    box-shadow: 0 0 30px 10px #fff1cd, 0 10px 80px 20px #eec1eb77;
+    padding: 45px 60px;
+    text-align: center;
+    max-width: 350px;
+}
+
+h1 {
+    font-size: 3.2em;
+    color: #ff3c6f;
+    margin: 0 0 10px 0;
+    text-shadow: 0 3px 35px #fff, 0 0 18px #ffbfbf;
+    font-family: 'Pacifico', cursive, Arial, sans-serif;
+}
+
+h3 {
+    font-size: 1.6em;
+    color: #664488;
+    margin-bottom: 10px;
+    font-weight: normal;
+}
+
+.cake {
+    margin: 20px auto;
+    width: 120px;
+    position: relative;
+}
+
+.cake-main {
+    width: 120px;
+    height: 60px;
+    background: #fff1e0;
+    border-radius: 55% 55% 40% 40% / 50% 40% 80% 80%;
+    box-shadow: 0px 10px 25px #e2a781aa;
+    border: 4px solid #e35b7f;
+    position: relative;
+    z-index: 1;
+}
+
+.cake-top {
+    position: absolute;
+    top: 10px;
+    left: 48px;
+    width: 24px;
+    height: 24px;
+    border-radius: 70%;
+    background: #ffdf9f;
+    box-shadow: 0 0 6px 2px #fff7b0;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.candle {
+    width: 6px;
+    height: 24px;
+    background: repeating-linear-gradient(45deg, #fff, #fff 3px, #fda 3px, #fda 6px);
+    border-radius: 2px;
+    position: absolute;
+    top: -16px;
+    left: 52px;
+    z-index: 5;
+}
+
+.flame {
+    width: 10px;
+    height: 18px;
+    background: radial-gradient(circle at 5px 6px, #fff5aa, #ffbe00 60%, #ff6600 90%, rgba(0, 0, 0, 0) 100%);
+    border-radius: 50% 50% 80% 80%;
+    position: absolute;
+    top: -20px;
+    left: 50px;
+    animation: flicker 1.4s infinite;
+}
+
+@keyframes flicker {
+    0% {
+        transform: scaleY(1) scaleX(1);
+    }
+
+    10% {
+        transform: scaleY(0.98) scaleX(1.05);
+    }
+
+    18% {
+        transform: scaleY(1.12) scaleX(0.96);
+    }
+
+    40% {
+        transform: scaleY(0.95) scaleX(1.08);
+    }
+
+    60% {
+        transform: scaleY(1);
+    }
+
+    100% {
+        transform: scaleY(1) scaleX(1);
+    }
+}
+
+.letter {
+    margin-top: 12px;
+}
+
+button {
+    padding: 12px 36px;
+    background: linear-gradient(90deg, #ff78a7, #ffd38e 100%);
+    color: #483456;
+    font-size: 1.3em;
+    border: none;
+    border-radius: 77px;
+    box-shadow: 0 4px 22px #fffadc6a;
+    cursor: pointer;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    transition: background 0.3s;
+    font-family: inherit;
+    letter-spacing: 3px;
+    font-weight: bold;
+}
+
+button:hover {
+    background: linear-gradient(90deg, #ffd38e, #ff96be 100%);
+}
+
+#confetti-canvas {
+    pointer-events: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 100;
+}
+
+#audio-btn {
+    background: #fff3;
+    border: none;
+    font-size: 1.1rem;
+}

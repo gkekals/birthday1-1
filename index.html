@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>🎉 Happy Birthday! 🎂</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="style.css" rel="stylesheet" />
+</head>
+
+<body>
+    <canvas id="star-bg"></canvas>
+    <div id="confetti-container">
+        <canvas id="confetti-canvas"></canvas>
+    </div>
+    <div class="center-box">
+        <h1>Happy Birthday! 🎂</h1>
+        <div class="cake">
+            <div class="cake-main"></div>
+            <div class="cake-top"></div>
+            <div class="candle"></div>
+            <div class="flame"></div>
+        </div>
+        <h3 id="toFriend">이예원</h3>
+        <div class="letter" id="letterMsg" style="font-size:1.3em; color:#664488;">
+            다음 생일까지 <span id="daysLeft">--</span>일 남았습니다!
+        </div>
+        <button onclick="popConfetti()">클릭! ✨ 축하 파티🎉</button><br />
+        <button id="audio-btn" onclick="playMusic()">배경음악 듣기♪</button>
+    </div>
+    <audio id="bday-audio" src="https://cdn.pixabay.com/audio/2022/05/25/audio_122393f2b5.mp3"></audio>
+    <script src="script.js"></script>
+</body>
+
+</html>
